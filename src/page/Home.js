@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import Item from './Item'
 //import { Categories } from './Categories'
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { Link } from 'react-router-dom';
 class Home extends React.Component {
 
   constructor() {
@@ -53,6 +54,7 @@ class Home extends React.Component {
           {this.state.posts ? (
             
               <div>
+                <Link to="/login"><button>Hello</button></Link>
                   <Grid container spacing={24} style={{padding: 24}}>
                       { this.state.posts.map(currentContent => (
                           <Grid item xs={12} sm={6} lg={4} xl={3} key={currentContent.ItemId}>

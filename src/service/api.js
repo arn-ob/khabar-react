@@ -1,8 +1,9 @@
 //import request from './'
 import axios from 'axios'
-const baseAddress = 'http://picosoft-001-site15.gtempurl.com/api/'
-//const baseAddress = 'http://localhost:49477/api/'
-
+// import { baseAddress } from '../globalsettings';
+const baseAddress = "http://picosoft-001-site15.gtempurl.com/api/";
+// const baseAddress = 'http://localhost:49477/api/'
+// const baseAddress= 'http://picosoft-001-site15.gtempurl.com/api/'
 
 /**
  * 
@@ -28,8 +29,9 @@ const baseAddress = 'http://picosoft-001-site15.gtempurl.com/api/'
   // }
   
   export const GetItemsList = (url) => {
-    url=`${baseAddress}${url}`;
-    return axios.post(url).then(res=>(res.data.Content)).catch(e => { console.log('error'+JSON.stringify(e))})
+    let urls= baseAddress + url;
+    console.log(urls);
+    return axios.post(urls).then(res=>(res.data.Content)).catch(e => { console.log('error'+JSON.stringify(e))})
 }
 
 export const GetItem = (url) => {
