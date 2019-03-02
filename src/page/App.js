@@ -3,6 +3,7 @@ import NavBar from './NavBar'
 import Home from './Home'
 import { Login } from './login'
 import Admin from './admin'
+import Order from '../page/Order'
 import PrivateRoute from './../Components/privateRoute'
 import history from './../_helper/history';
 import { Router, Route } from 'react-router-dom';
@@ -25,7 +26,8 @@ export default class App extends Component {
         <NavBar/>
         <Router history={history}>
             <div>
-              <Route path='/home' component={Home} />
+              <Route path='/' component={Home} />
+              <Route path="/Order/:ItemId" component={Order} />
               <Route path="/login"  component={Login}/>
               <PrivateRoute exact path='/admin' component={Admin} />
             </div>
