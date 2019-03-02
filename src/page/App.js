@@ -26,7 +26,7 @@ export default class App extends Component {
         <NavBar/>
         <Router history={history}>
             <div>
-            <Redirect from='/' to='/item'/>
+            <Redirect from='/' to='/home'/>
               <Route path='/home' component={Home} />
               <Route path='/item' component={Item} />
               <Route path="/login"  component={Login}/>

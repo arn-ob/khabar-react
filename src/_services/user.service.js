@@ -1,5 +1,3 @@
-import { Promise, reject } from "q";
-import { resolve } from "dns";
 
 export const userService = {
     login,
